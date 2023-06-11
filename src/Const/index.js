@@ -160,7 +160,7 @@ const projects = [
   {
     name: "Sudoku Solver",
     description:
-      "Web-based platform that allows users to solve the input sudoku. It works on the algorithm based on back tracking and recursion.",
+      "The Sudoku Solver is a web application which provides a user-friendly interface for solving Sudoku puzzles. It works on the algorithm based on back tracking and recursion.",
     tags: [
       {
         name: "HTML",

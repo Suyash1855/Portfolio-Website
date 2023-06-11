@@ -34,7 +34,6 @@ const ProjectCard = ({
                 src={linkI}
                 alt="github"
                 className="w-4 h-4 object-contain"
-                srcset=""
               />
             </div>
             <div
@@ -45,7 +44,6 @@ const ProjectCard = ({
                 src={github}
                 alt="github"
                 className="w-4 h-4 object-contain"
-                srcset=""
               />
             </div>
           </div>
