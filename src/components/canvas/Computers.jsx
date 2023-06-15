@@ -1,11 +1,36 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import { resizeRendererToDisplaySize } from "../../Utils/Motion";
+import * as THREE from "three";
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const canvasRef = useRef(null);
+  const renderer = useRef(null);
 
+  useEffect(() => {
+    // Initialize Three.js renderer
+    renderer.current = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+
+    // Function to handle resize
+    const handleResize = () => {
+      resizeRendererToDisplaySize(renderer.current);
+      // Additional code for handling resize if needed
+    };
+
+    // Attach event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Call the resize function initially
+    handleResize();
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width:500px)");
 
@@ -27,6 +52,7 @@ const ComputersCanvas = () => {
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      ref={canvasRef}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
