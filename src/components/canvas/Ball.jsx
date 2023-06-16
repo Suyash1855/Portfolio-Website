@@ -13,15 +13,15 @@ import CanvasLoader from "../Loader";
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
   return (
-    <>
-      <ambientLight intensity={0.25} floatIntensity={2} speed={1.75} />
-      <directionalLight position={[0, 1, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.75}>
+    <Float>
+      <ambientLight intensity={0.1} floatIntensity={0.5} speed={1.75} />
+      <directionalLight position={[0, 0, 0.05]} />
+      <mesh castShadow receiveShadow scale={2.25}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
+          // polygonOffset
+          // polygonOffsetFactor={-5}
           flatShading
         />
         <Decal
@@ -30,7 +30,7 @@ const Ball = (props) => {
           map={decal}
         />
       </mesh>
-    </>
+    </Float>
   );
 };
 
