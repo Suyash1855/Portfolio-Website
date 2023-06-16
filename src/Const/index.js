@@ -81,26 +81,26 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "python",
-    icon: python,
-  },
-  {
-    name: "java",
-    icon: java,
-  },
-  {
-    name: "nextjs",
-    icon: Nextjs,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
+  // {
+  //   name: "python",
+  //   icon: python,
+  // },
+  // {
+  //   name: "java",
+  //   icon: java,
+  // },
+  // {
+  //   name: "nextjs",
+  //   icon: Nextjs,
+  // },
 ];
 
 const testimonials = [
