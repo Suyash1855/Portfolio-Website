@@ -14,35 +14,10 @@ const Earth = () => {
 };
 
 const EarthCanvass = () => {
-  const canvasRef = useRef(null);
-  const renderer = useRef(null);
-
-  useEffect(() => {
-    // Initialize Three.js renderer
-    renderer.current = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-
-    // Function to handle resize
-    const handleResize = () => {
-      resizeRendererToDisplaySize(renderer.current);
-      // Additional code for handling resize if needed
-    };
-
-    // Attach event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Call the resize function initially
-    handleResize();
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <Canvas
       shadows
       frameloop="demand"
-      ref={canvasRef}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
