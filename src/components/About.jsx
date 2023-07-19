@@ -17,7 +17,7 @@ const About = () => {
         </h2>
       </motion.div>
       <motion.div
-        className="mt-4 flex flex-col items-center justify-center xs:flex-row xs:align-item gap-11 text-secondary text-[17px] max-w-7xl leading-[25px]"
+        className="mt-4 flex md:flex-row flex-col items-center justify-center xs:align-item gap-11 text-secondary text-[17px] max-w-7xl leading-[25px]"
         variants={fadeIn("", "", 0.1, 1)}
       >
         <h1 className="w-100 mb-5">
@@ -44,23 +44,14 @@ const About = () => {
             or opportunities. Thank you for visiting!
           </p>
         </h1>
-        <motion.div className="xs:w-[300px] h-[200px] m-auto w-[200px] block">
-          <Tilt className="xs:w-[220px] m-auto w-[200px]">
-            <motion.div
-              className="w-full green-pink-gradient p-[1px] rounded-[20px]   shadow-card"
-              variants={fadeIn("right", "spring", 0.5, 0.75)}
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="bg-primary rounded-[20px] py-5 px-12 min-h-[280px]"
-              >
-                Heloo
-              </motion.div>
-            </motion.div>
-          </Tilt>
-        </motion.div>
+        {/* <motion.div className="xs:w-[300px] block h-[280px] m-auto w-[200px] ">
+          <motion.div
+            className="w-full green-pink-gradient p-[1px] rounded-[20px]   shadow-card"
+            variants={fadeIn("right", "spring", 0.5, 0.75)}
+          >
+            <p className="text-white">hey</p>
+          </motion.div>
+        </motion.div> */}
       </motion.div>
     </>
   );

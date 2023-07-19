@@ -20,11 +20,11 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="h-[400px] ml-[-45px] md:ml-[0px] flex items-start justify-start mt-[-200px] md:mt-[-400px] md:w-full md:h-full">
+      <div className="h-[500px] ml-[-45px] md:ml-[0px] flex items-start justify-start mt-[-200px] md:mt-[-420px] md:w-full md:h-full">
         <ComputersCanvas />
       </div>
       <div
-        className=" xs:bottom-10 bottom-32 w-full flex justify-center
+        className=" xs:bottom-10 z-[49] bottom-32 w-full flex justify-center
         items-center"
       >
         <a href="#about">
@@ -38,7 +38,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 rounded-full z-[10000] bg-secondary mb-1"
             />
           </div>
         </a>
