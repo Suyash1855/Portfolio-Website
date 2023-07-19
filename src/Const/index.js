@@ -154,8 +154,8 @@ const projects = [
       },
     ],
     image: Screenshot2,
-    source_code_link: "https://github.com/",
-    live_link: "https://sudoku-solver-53bd7.web.app/",
+    source_code_link: "https://github.com/Suyash1855/Meraki-Corner",
+    live_link: "https://meraki-corner.vercel.app/",
   },
   {
     name: "Sudoku Solver",
@@ -198,7 +198,7 @@ const projects = [
       },
     ],
     image: student,
-    source_code_link: "https://github.com/Suyash1855/SpaceWebsite",
+    source_code_link: "https://github.com/Suyash1855/StudentRecordPortal",
     live_link: "https://sudoku-solver-53bd7.web.app/",
   },
 ];
